@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: shoe_store
+  database: shoestore
 test:
   adapter: postgresql
-  database: shoe_store_test
+  database: shoestore_test
