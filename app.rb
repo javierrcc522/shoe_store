@@ -43,3 +43,40 @@ post('/create_store') do
   erb(:index)
 end
 ## end of table two
+
+#Store page (dont change!)
+get('/store/:id') do
+  @store = Store.find(params[:id])
+  @brands = Brand.all()
+  @unused_brands = @brands - @store.brands
+  erb(:store_info)
+end
+
+post('/add_sot/:id') do
+  store = Store.find(params[:id])
+  brands = Brand.all
+  brand_ids = params['brand_ids']
+  #joining ingredients and brands
+  brand_ids.each do |brand_id|
+    store.brands.push(Brand.find(brand_id))
+  end
+  redirect "/store/#{store.id}"
+end
+
+patch("/store/:id") do
+  rename = params.fetch('rename')
+  @store = Store.find(params.fetch("id").to_i())
+  #renaming store
+  @store.update({:name => rename})
+  @store = Store.all()
+  redirect '/'
+end
+
+delete("/store/:id") do
+  @store = Store.find(params.fetch("id").to_i())
+  @store.delete
+  @stores = Store.all()
+  redirect "/"
+end
+
+#end of the store page

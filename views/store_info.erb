@@ -1,0 +1,65 @@
+<div class="jumbotron">
+  <h1> <%= @store.name() %> </h1>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-2">
+    <a href='/'><button type="button" class ="btn btn-primary">Return to store</button></a>
+  </div>
+
+  <div class="col-sm-2">
+    <form action="/store/<%= @store.id() %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" class='btn btn-danger'>Delete Store</button>
+    </form>
+  </div>
+
+  <form action="/store/<%= @store.id() %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <div class="form-group row">
+        <button type="submit" class='btn btn-info'>Rename</button>
+      <div class="col-sm-8">
+        <input class="form-control form-control-md" name="rename" id="lgFormGroupInput" placeholder="Update Name">
+      </div>
+    </div>
+  </form>
+
+</div><br>
+
+
+<div class="row">
+  <!-- Joining brands and store -->
+  <div class="col-sm-12">
+      <h1>Available Brands:</h1>
+
+      <% if @brands.any?() %>
+        <form action="/add_sot/<%= @store.id %>" method="post">
+          <% @unused_brands.each() do |brand| %>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="brand_ids[]" value="<%= brand.id() %>"><%= brand.brand() %>
+              </label>
+            </div>
+          <% end %>
+          <button type="submit">Add Brand</button>
+        </form>
+      <% end %><br><br>
+
+      <% if @store.brands().any?() %>
+
+        <h3>Here are all the brands for this store:</h3>
+
+        <ul>
+          <% @store.brands().each() do |add| %>
+            <li><%= add.brand() %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>There are no brands yet!</p>
+      <% end %>
+    </div>
+  </div>
+  <!-- End brands and store Joing -->
+
+</div>
