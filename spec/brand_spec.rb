@@ -9,8 +9,13 @@ describe(Brand) do
   end
 
   it("ensures the length of description is at most 100 characters") do
-    brand1 = Brand.new({:brand => "a".*(101)})
-    expect(brand1.save()).to(eq(false))
+    brand = Brand.new({:brand => "a".*(101)})
+    expect(brand.save()).to(eq(false))
+  end
+
+  it("converts the names to uppercase") do
+    brand = Brand.create({:brand => "nike"})
+    expect(brand.brand()).to(eq("NIKE"))
   end
 
 
