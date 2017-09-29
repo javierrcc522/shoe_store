@@ -1,6 +1,6 @@
 # _Shoe Store_
 
-#### _A volunteer tracker project using psql, sinatra and ruby ActiveRecord-html-css-boootstrap_
+#### _A Shoe Store project using psql, sinatra and ruby ActiveRecord-html-css-boootstrap_
 
 #### By _Javier Jimenez_
 
