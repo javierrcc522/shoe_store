@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 20170929172941) do
     t.integer "price"
   end
 
-  create_table "stores", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "stores_brands", force: :cascade do |t|
+  create_table "brands_stores", force: :cascade do |t|
     t.integer "brand_id"
     t.integer "store_id"
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.string "name"
   end
 
 end
