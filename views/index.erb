@@ -1,0 +1,62 @@
+<div class="jumbotron">
+  <h1>Javi's store</h1>
+</div>
+
+
+<div class="row">
+  <!-- Add New brand -->
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col">
+        <div class="card bg-light">
+          <div class="card-body">
+            <h1>New brand</h1>
+            <form action="/create_brand" method="post">
+              <div class="row">
+                <div class="col-sm-7">
+                  <div class="form-group">
+                    <label for="brand">Brand Name: </label>
+                    <input id="brand" name="brand" class="form-control" type="text" required>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="price">Price ($moneys): </label>
+                    <input id="price" name="price" class="form-control" type="number" required>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-info">Create Brand</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- End brand -->
+
+  <div class="col-sm-6">
+
+    <!-- Add New store -->
+    <div class="row">
+      <div class="col">
+        <div class="card bg-light">
+          <div class="card-body">
+            <h1>New Store</h1>
+            <form action="/create_store" method="post">
+              <div class="row">
+                <div class="col-sm-7">
+                  <div class="form-group">
+                    <label for="name">Store Name: </label>
+                    <input id="name" name="name" class="form-control" type="text" required>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success">Create Store</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End store -->
+  </div>
