@@ -78,5 +78,10 @@ delete("/store/:id") do
   @stores = Store.all()
   redirect "/"
 end
-
 #end of the store page
+
+get('/brand/:id') do
+  @brands = Brand.find(params[:id])
+  @store = Store.all()
+  erb(:brand_info)
+end
