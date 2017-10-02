@@ -21,10 +21,14 @@ end
 post('/create_brand') do
   brand = params['brand']
   price = params['price']
-  brand = Brand.create({:brand => brand, :price => price})
-  @brands = Brand.all().sort_by {|brand| brand.price}
-  @stores = Store.all()
-  erb(:index)
+  if brand = Brand.create({:brand => brand, :price => price}).id
+    @brands = Brand.all().sort_by {|brand| brand.price}
+    @stores = Store.all()
+    erb(:index)
+  else
+
+  end
+
 end
 ### end of brand table
 

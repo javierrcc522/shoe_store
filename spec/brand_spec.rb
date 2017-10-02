@@ -13,10 +13,17 @@ describe(Brand) do
     expect(brand.save()).to(eq(false))
   end
 
-  it("converts the names to uppercase") do
-    brand = Brand.create({:brand => "nike"})
-    expect(brand.brand()).to(eq("NIKE"))
+  it('prevents duplicate entries') do
+    Brand.create({:brand => 'Nike'})
+    brand = Brand.new({:brand => 'Nike'})
+    expect(brand.save()).to(eq(false))
   end
+
+  # it("converts the first letter to uppercase") do
+  #   brand = Brand.new({:brand => "nike"})
+  #   brand.save()
+  #   expect(brand.brand()).to(eq("Nike"))
+  # end
 
 
 end
