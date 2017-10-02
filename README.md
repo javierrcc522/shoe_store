@@ -5,18 +5,20 @@
 #### By _Javier Jimenez_
 
 ## Description
+![alt tag](./screen_shot1.png?raw=true "Screen Shot 1")
+![alt tag](./screen_shot2.png?raw=true "Screen Shot 2")
 
-_Lets user be able to add, update, delete and list shoe stores._
-_Lets user be able to add and list new shoe brands. Shoe brands should include price._
-_Lets user be able to add shoe brands in the application._
-_Lets user to be able to add existing shoe brands to a store to show where they are sold._
-_Lets user to be able to associate the same brand of shoes with multiple stores._
-_Lets user to be able to see all of the brands a store sells on the individual store page._
-_Lets user store names and shoe brands to be saved with a capital letter no matter how user enters them._
-_It changes the user number input to this money format $50.00._
-_It won't allow user to submit blank inputs_
-_It won't allow user to more than one name for the brand or the store name_
-_It won't allow user to input more than 100 characters into the application_
+* _Lets user be able to add, update, delete and list shoe stores._
+* _Lets user be able to add and list new shoe brands. Shoe brands should include price._
+* _Lets user be able to add shoe brands in the application._
+* _Lets user to be able to add existing shoe brands to a store to show where they are sold._
+* _Lets user to be able to associate the same brand of shoes with multiple stores._
+* _Lets user to be able to see all of the brands a store sells on the individual store page._
+* _Lets user store names and shoe brands to be saved with a capital letter no matter how user enters them._
+* _It changes the user number input to this money format $50.00._
+* _It won't allow user to submit blank inputs_
+* _It won't allow user to more than one name for the brand or the store name_
+* _It won't allow user to input more than 100 characters into the application_
 
 
 ## Specs

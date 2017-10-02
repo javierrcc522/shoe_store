@@ -19,9 +19,9 @@ describe(Store) do
     expect(store.save()).to(eq(false))
   end
 
-  it("converts the names to uppercase") do
-    store = Store.create({:name => "store"})
-    expect(store.name()).to(eq("Store"))
-  end
+  # it("converts the names to uppercase") do
+  #   store = Store.create({:name => "store"})
+  #   expect(store.name()).to(eq("Store"))
+  # end
 
 end
